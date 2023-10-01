@@ -1,0 +1,11 @@
+div.p {
+    display: contents;
+}
+
+div.p > * {
+    margin: 0;
+}
+
+div.p > *:last-child {
+    margin: 0 0 2rem 0;
+}
