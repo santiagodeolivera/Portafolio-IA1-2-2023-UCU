@@ -1,3 +1,8 @@
+function log(value, msg) {
+    console.log(msg, ":", value);
+    return value;
+}
+
 /*
 interface Template {
     tag: string,
@@ -6,13 +11,9 @@ interface Template {
     style?: [string, string][],
     attrs?: [string, string][]
 };
+
 args: Template
 */
-function log(value, msg) {
-    console.log(msg, ":", value);
-    return value;
-}
-
 function newElement(args) {
     const res = document.createElement(args.tag);
 
@@ -61,3 +62,4 @@ function attributeDescriptionList(elem, data) {
         );
     }
 }
+
