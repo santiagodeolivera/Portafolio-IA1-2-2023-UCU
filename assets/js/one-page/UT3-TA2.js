@@ -157,56 +157,41 @@ const attributesData = [
 ];
 
 const attributeList = document.getElementById("attribute-list");
-for (let attr of attributesData) {
-    const name = document.createElement("span");
-    name.style.fontWeight = "bold";
-    if (attr.objective) name.style.textDecoration = "underline";
-    name.textContent = attr.name;
-
-    const node = document.createElement("li");
-    node.append(name, ": ", attr.desc);
-
-    attributeList.append(node);
-}
+attributeDescriptionList(attributeList, attributesData);
 
 const attributeTable = document.getElementById("attribute-table-content");
 for (let attr of attributesData) {
-    const name = document.createElement("td");
-    name.textContent = attr.name;
-
-    const type = document.createElement("td");
-    type.textContent = attr.type;
-
-    const range = document.createElement("td");
-    range.textContent = attr.range;
-
-    const node = document.createElement("tr");
-    node.append(name, type, range);
-
-    attributeTable.append(node);
+    attributeTable.appendChild(
+        newElement({
+            tag: "tr",
+            children: [
+                { tag: "td", children: [attr.name] },
+                { tag: "td", children: [attr.type] },
+                { tag: "td", children: [attr.range] },
+            ]
+        })
+    );
 }
 
 const distrTable = document.getElementById("distr-table-content");
 for (let attr of attributesData) {
-    const name = document.createElement("td");
-    name.textContent = attr.name;
-
-    const distrImgTag = document.createElement("img");
-    distrImgTag.src = attr.distr.imgSrc;
-
-    const distrImg = document.createElement("td");
-    distrImg.appendChild(distrImgTag);
-
-    const distr = document.createElement("td");
-    distr.textContent = attr.distr.desc;
-
-    const outliers = document.createElement("td");
-    outliers.textContent = attr.distr.outliers;
-
-    const node = document.createElement("tr");
-    node.append(name, distrImg, outliers);
-
-    distrTable.appendChild(node);
+    distrTable.appendChild(
+        newElement({
+            tag: "tr",
+            children: [
+                { tag: "td", children: [attr.name] },
+                {
+                    tag: "td",
+                    children: [{
+                        tag: "img",
+                        attrs: [["src", attr.distr.imgSrc]]
+                    }]
+                },
+                { tag: "td", children: [attr.distr.desc] },
+                { tag: "td", children: [attr.distr.outliers] },
+            ]
+        })
+    );
 }
 
 const rmSteps = [
@@ -236,8 +221,10 @@ const rmSteps = [
 
 const rmStepsList = document.getElementById("rm-process-steps");
 for (let step of rmSteps) {
-    const node = document.createElement("li");
-    node.textContent = step.content;
-
-    rmStepsList.appendChild(node);
+    rmStepsList.appendChild(
+        newElement({
+            tag: "li",
+            children: [step.content]
+        })
+    );
 }
