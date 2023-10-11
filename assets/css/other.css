@@ -9,3 +9,7 @@ div.p > * {
 div.p > *:last-child {
     margin: 0 0 2rem 0;
 }
+
+.center-text, .center-text * {
+    vertical-align: middle;
+}
