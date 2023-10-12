@@ -53,12 +53,10 @@
                 <div class="p">
                     <p>Para esto tenemos dos datasets:</p>
                     <ul>
-                        <li>
-                            Un <a href="static/UT3-TA4/csv/cardiac-training.csv">dataset de entrenamiento</a>, donde hay
+                        <li>Un dataset de entrenamiento, donde hay
                             personas que ya tuvieron un ataque cardíaco e indican si tuvieron otro o no.
                         </li>
-                        <li>
-                            Un <a href="static/UT3-TA4/csv/cardiac-scoring.csv">dataset de evaluación</a>, donde hay
+                        <li>Un dataset de evaluación, donde hay
                             personas que solo tuvieron un ataque cardíaco, y se intenta predecir si tendrá otro.
                         </li>
                     </ul>
@@ -72,7 +70,7 @@
                 <p>Para realizar este proyecto, se utilizó <a href="https://rapidminer.com/">RapidMiner</a>, una
                     aplicación para desarrollo de modelos de IA de uso industrial. El resultado es el siguiente:</p>
                 <p>Proceso de RapidMiner:</p>
-                <img class="max-width-100" src="images/UT3-TA4/RapidMiner/proceso.png">
+                <img class="max-width-100" src="images/UT3-TA4/RapidMiner/proceso/1.png">
                 <p>Modelo de regresión logística:</p>
                 <img class="max-width-100" src="images/UT3-TA4/RapidMiner/modelo.png">
                 <p>Dataset de evaluación con las predicciones:</p>
@@ -96,7 +94,18 @@
                     confianza (que suele ser 0,5), se considera como un caso positivo. El nivel de confianza se puede
                     cambiar para ajustarse al contexto.
                 </p>
+                <p>Para determinar la performance del modelo, conviene generar un nuevo par de datasets de entrenamiento
+                    y evaluación, a partir del dataset de entrenamiento original, de la siguiente forma:</p>
+                <img class="max-width-100" src="/images/UT3-TA4/RapidMiner/proceso/2.png">
+                <img class="max-width-100" src="/images/UT3-TA4/RapidMiner/proceso/2-1.png">
+                <img class="max-width-100" src="/images/UT3-TA4/RapidMiner/matriz_confusion.png">
+                
+                <!--
                 <h2>Python</h2>
+                <p>También se realizó este proyecto en Python, más concretamente, en Google Colab, que se puede acceder
+                    desde <a href="https://colab.research.google.com/drive/1Upt9A4DQPr3tRPOKWuPF3NODTkfRVFnR">este
+                        link</a>.</p>
+-->
             </section>
 
         </div>
