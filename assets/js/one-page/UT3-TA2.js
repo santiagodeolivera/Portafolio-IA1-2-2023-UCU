@@ -208,7 +208,7 @@ const rmSteps = [
         content: "Barajar los ejemplos del dataset mediante el operador \"Shuffle\"."
     },
     {
-        content: "Dividir el dataset en los sub-datasets mencionados mediante dos operadores \"Filter examples range\", con rangos de 1 - 450 y 451 - 506 respectivamente."
+        content: "Dividir el dataset en dos sub-datasets (uno para entrenamiento, y otro para evaluación) mediante dos operadores \"Filter examples range\", con rangos de 1 - 450 y 451 - 506 respectivamente."
     },
     {
         content: "Con el dataset de entrenamiento, realizar dos operaciones \"Split Validation\", una con regresión lineal sin selección de atributos, y otra con una regresión lineal con una selección de atributos \"greedy\".\n"
