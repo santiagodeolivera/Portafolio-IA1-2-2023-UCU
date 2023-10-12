@@ -7,130 +7,150 @@
 <html>
 
 <head>
-	<title>Predicción de ataques al corazón - Portafolios de IA de Santiago De Olivera</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+    <title>Predicción de ataques al corazón - Portafolios de IA de Santiago De Olivera</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 </head>
 
 <body class="is-preload">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-		<!-- Header -->
-		<header id="header">
-		</header>
+        <!-- Header -->
+        <header id="header">
+        </header>
 
-		<!-- Nav -->
-		<nav id="nav">
-			<ul class="links">
-				<li><a href="index.html">Página principal</a></li>
-			</ul>
-			<ul class="icons">
-				<li><a href="https://www.linkedin.com/in/santiago-de-olivera-49247b234/"
-						class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-				<li><a href="https://github.com/santiagodeolivera" class="icon brands fa-github"><span
-							class="label">GitHub</span></a></li>
-			</ul>
-		</nav>
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Página principal</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/santiago-de-olivera-49247b234/"
+                        class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/santiagodeolivera" class="icon brands fa-github"><span
+                            class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
 
-		<!-- Main -->
-		<div id="main">
+        <!-- Main -->
+        <div id="main">
 
-			<!-- Post -->
-			<section class="post">
-				<h1>Predicción de segundo ataque cardíaco</h1>
+            <!-- Post -->
+            <section class="post">
+                <h1>Predicción de segundo ataque cardíaco</h1>
 
-				<h2>Descripción</h2>
-				<p>Este proyecto consiste en generar un modelo de IA que sea capaz de predecir si alguien podría recibir
-					un ataque cardíaco en el futuro, o más concretamente, un <i>segundo</i> ataque cardíaco, dado que se
-					planea implementar para ser utilizado por un cardiólogo, el cual, con la ayuda del modelo, puede
-					decidir distintos tratamientos para sus pacientes.</p>
-				<div class="p">
-					<p>Para esto tenemos dos datasets:</p>
-					<ul>
-						<li>
-							Un <a href="static/UT3-TA4/csv/cardiac-training.csv">dataset de entrenamiento</a>, donde hay
-							personas que ya tuvieron un ataque cardíaco e indican si tuvieron otro o no.
-						</li>
-						<li>
-							Un <a href="static/UT3-TA4/csv/cardiac-scoring.csv">dataset de evaluación</a>, donde hay
-							personas que solo tuvieron un ataque cardíaco, y se intenta predecir si tendrá otro.
-						</li>
-					</ul>
-				</div>
-				<div class="p">
-					<p>Estos datasets tienen los siguientes atributos:</p>
-					<ul id="attribute-list"></ul>
-				</div>
+                <h2>Descripción</h2>
+                <p>Este proyecto consiste en generar un modelo de IA que sea capaz de predecir si alguien podría recibir
+                    un ataque cardíaco en el futuro, o más concretamente, un <i>segundo</i> ataque cardíaco, dado que se
+                    planea implementar para ser utilizado por un cardiólogo, el cual, con la ayuda del modelo, puede
+                    decidir distintos tratamientos para sus pacientes.</p>
+                <div class="p">
+                    <p>Para esto tenemos dos datasets:</p>
+                    <ul>
+                        <li>
+                            Un <a href="static/UT3-TA4/csv/cardiac-training.csv">dataset de entrenamiento</a>, donde hay
+                            personas que ya tuvieron un ataque cardíaco e indican si tuvieron otro o no.
+                        </li>
+                        <li>
+                            Un <a href="static/UT3-TA4/csv/cardiac-scoring.csv">dataset de evaluación</a>, donde hay
+                            personas que solo tuvieron un ataque cardíaco, y se intenta predecir si tendrá otro.
+                        </li>
+                    </ul>
+                </div>
+                <div class="p">
+                    <p>Estos datasets tienen los siguientes atributos:</p>
+                    <ul id="attribute-list"></ul>
+                </div>
 
-				<h2>RapidMiner</h2>
-				<p>Para realizar este proyecto, se utilizó <a href="https://rapidminer.com/">RapidMiner</a>, una
-					aplicación para
-					desarrollo de modelos de IA de uso industrial.</p>
-				<p>Este es el resultado en cuestión:</p>
-				<img src="" alt="Proceso de RapidMiner">
-				<img src="" alt="Modelo de regresión logística">
-				<img src="" alt="Dataset de evaluación con las predicciones">
-				<img src="" alt="Performance">
-			</section>
+                <h2>RapidMiner</h2>
+                <p>Para realizar este proyecto, se utilizó <a href="https://rapidminer.com/">RapidMiner</a>, una
+                    aplicación para desarrollo de modelos de IA de uso industrial. El resultado es el siguiente:</p>
+                <p>Proceso de RapidMiner:</p>
+                <img class="max-width-100" src="images/UT3-TA4/RapidMiner/proceso.png">
+                <p>Modelo de regresión logística:</p>
+                <img class="max-width-100" src="images/UT3-TA4/RapidMiner/modelo.png">
+                <p>Dataset de evaluación con las predicciones:</p>
+                <img class="max-width-100" src="images/UT3-TA4/RapidMiner/dataset_evaluacion.png">
+                <img class="max-width-100" style="margin: 0;" src="images/UT3-TA4/RapidMiner/estadisticas_1.png">
+                <img class="max-width-100" src="images/UT3-TA4/RapidMiner/estadisticas_2.png">
+                <p>Dentro de las predicciones, se puede notar que 350 de ellas son clasificadas como positivas, y 340
+                    son negativas. Sin embargo, cabe aclarar que el modelo calcula una probabilidad de que sea positivo
+                    o negativo.<br>
+                    Para poner un ejemplo, veamos este ejemplo del dataset de evaluación:
+                </p>
+                <img class="max-width-100" src="images/UT3-TA4/RapidMiner/ejemplo1.png">
+                <p>Como se puede ver, el modelo categoriza este ejemplo como negativo, o sea, que lo más probable es que
+                    no reciba un ataque al corazón. Sin embargo, viendo el atributo
+                    <span class="mono">confidence(No)</span>, se puede notar que reconoce una probabilidad del 50.3% de
+                    que sea negativo. Con esta probabilidad, lo mejor es asumir que podría tener un segundo ataque al
+                    corazón, y tomar medidas con ello en cuenta.
+                </p>
+                <p>El modelo, en sí, calcula las probabilidades de que un paciente reciba un ataque al corazón o no.
+                    Luego, si la probabilidad de que ocurra es mayor o igual que un valor conocido como nivel de
+                    confianza (que suele ser 0,5), se considera como un caso positivo. El nivel de confianza se puede
+                    cambiar para ajustarse al contexto.
+                </p>
+                <h2>Python</h2>
+            </section>
 
-		</div>
+        </div>
 
-		<!-- Footer -->
-		<footer id="footer">
-			<section class="split contact">
-				<section class="alt">
-					<h3>Dirección</h3>
-					<p>Calle 2B entre 12 y 14, Atlántida, Canelones, Uruguay</p>
-				</section>
-				<section>
-					<h3>Número de teléfono</h3>
-					<p>(+598) 098-553-946</p>
-				</section>
-				<section>
-					<h3>Email</h3>
-					<p>santiagodeolivera@gmail.com, santiago.deolivera@correo.ucu.edu.uy</p>
-				</section>
-				<section>
-					<h3>Social</h3>
-					<ul class="icons alt">
-						<li><a href="https://www.linkedin.com/in/santiago-de-olivera-49247b234/"
-								class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a>
-						</li>
-						<li><a href="https://github.com/santiagodeolivera" class="icon brands alt fa-github"><span
-									class="label">GitHub</span></a></li>
-					</ul>
-				</section>
-			</section>
-		</footer>
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Dirección</h3>
+                    <p>Calle 2B entre 12 y 14, Atlántida, Canelones, Uruguay</p>
+                </section>
+                <section>
+                    <h3>Número de teléfono</h3>
+                    <p>(+598) 098-553-946</p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p>santiagodeolivera@gmail.com, santiago.deolivera@correo.ucu.edu.uy</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/santiago-de-olivera-49247b234/"
+                                class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a>
+                        </li>
+                        <li><a href="https://github.com/santiagodeolivera" class="icon brands alt fa-github"><span
+                                    class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
 
 
-		<!-- Copyright -->
-		<div id="copyright">
-			<ul>
-				<li>&copy; Untitled</li>
-				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul>
+                <li>&copy; Untitled</li>
+                <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
 
-	</div>
+    </div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-	<script src="assets/js/other.js"></script>
-	<script src="assets/js/one-page/UT3-TA4.js"></script>
+    <script src="assets/js/other.js"></script>
+    <script src="assets/js/one-page/UT3-TA4.js"></script>
 
 </body>
 

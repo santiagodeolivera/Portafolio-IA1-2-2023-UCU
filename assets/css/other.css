@@ -13,3 +13,11 @@ div.p > *:last-child {
 .center-text, .center-text * {
     vertical-align: middle;
 }
+
+.max-width-100 {
+    max-width: 100%;
+}
+
+.mono {
+    font-family: monospace;
+}
