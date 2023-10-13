@@ -1,3 +1,47 @@
-<svg height="30" width="200">
-  <text x="0" y="15" fill="red">I love SVG!</text>
-</svg> 
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="70mm"
+   height="39.129002mm"
+   viewBox="0 0 70 39.129002"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="lda.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.2623761"
+     inkscape:cx="-20.596081"
+     inkscape:cy="93.078442"
+     inkscape:window-width="1366"
+     inkscape:window-height="697"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="M 22.101756,29.128998 H 10 V 10.000001 h 2.543681 v 16.867947 h 9.558075 z m 18.70505,-9.545228 q 0,2.607915 -1.143372,4.72765 -1.130525,2.119734 -3.019016,3.2888 -1.310381,0.809353 -2.929087,1.169065 -1.605859,0.359713 -4.239469,0.359713 H 24.645437 V 10.000001 h 4.779038 q 2.800618,0 4.445018,0.4111 1.657247,0.398253 2.800619,1.104831 1.952725,1.220453 3.04471,3.25026 1.091984,2.029806 1.091984,4.817578 z m -2.659303,-0.03854 q 0,-2.248203 -0.78366,-3.789828 -0.783659,-1.541625 -2.338131,-2.428059 -1.130525,-0.642344 -2.402365,-0.886435 -1.271841,-0.256937 -3.04471,-0.256937 h -2.389519 v 14.761059 h 2.389519 q 1.837103,0 3.198872,-0.269784 1.374616,-0.269785 2.517988,-1.002057 1.426003,-0.912128 2.132581,-2.402365 0.719425,-1.490238 0.719425,-3.725594 z m 21.852537,9.583769 h -2.710691 l -1.875644,-5.331453 h -8.273387 l -1.875644,5.331453 h -2.582222 l 6.963006,-19.128997 h 3.391575 z M 54.630046,21.613576 51.277012,12.22251 47.91113,21.613576 Z"
+       id="text1"
+       style="font-size:26.3104px;stroke-width:2.19253"
+       aria-label="LDA" />
+  </g>
+</svg>
