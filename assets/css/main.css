@@ -4252,6 +4252,7 @@ input, select, textarea {
 					}
 
 					#footer > section.split.contact > section > :first-child {
+						/* original:
 						-moz-flex-shrink: 0;
 						-webkit-flex-shrink: 0;
 						-ms-flex-shrink: 0;
@@ -4261,6 +4262,16 @@ input, select, textarea {
 						-ms-flex-grow: 0;
 						flex-grow: 0;
 						width: 6rem;
+						*/
+						-moz-flex-shrink: 0;
+						-webkit-flex-shrink: 0;
+						-ms-flex-shrink: 0;
+						flex-shrink: 0;
+						-moz-flex-grow: 0;
+						-webkit-flex-grow: 0;
+						-ms-flex-grow: 0;
+						flex-grow: 0;
+						width: 13rem;
 					}
 
 					#footer > section.split.contact > section > :last-child {
@@ -4296,7 +4307,10 @@ input, select, textarea {
 		#footer form label,
 		#footer h3,
 		#footer p {
-			font-size: 0.8rem;
+			/* original:
+				font-size: 0.8rem; */
+			font-size: 1rem;
+		    margin-right: 1rem;
 		}
 
 		@media screen and (max-width: 980px) {
