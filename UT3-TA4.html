@@ -14,6 +14,7 @@
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
+    <link rel="stylesheet" href="assets/css/one-page/UT3-TA4.css" />
 </head>
 
 <body class="is-preload">
@@ -43,22 +44,23 @@
 
             <!-- Post -->
             <section class="post">
-                <h1>Predicción de segundo ataque cardíaco</h1>
+                <h1>Aplicación del Modelo de Regresión Logística para predecir
+                    un segundo posible ataque al corazón en pacientes cardíacos</h1>
 
                 <h2>Descripción</h2>
-                <p>Este proyecto consiste en generar un modelo de IA que sea capaz de predecir si alguien podría recibir
-                    un ataque cardíaco en el futuro, o más concretamente, un <i>segundo</i> ataque cardíaco, dado que se
-                    planea implementar para ser utilizado por un cardiólogo, el cual, con la ayuda del modelo, puede
-                    decidir distintos tratamientos para sus pacientes.</p>
+                <p>Este proyecto consiste en generar un modelo de IA llamado Regresión Logística, cuyo objetivo es
+                    predecir si un paciente que haya tenido un ataque cardíaco, podría recibir un segundo.
+                    Este modelo se planea implementar para ser utilizado por cardiólogos, los cuales, con su ayuda,
+                    pueden decidir distintos tratamientos para sus pacientes, como medidas de prevención de un próximo
+                    ataque cardíaco.</p>
                 <div class="p">
                     <p>Para esto tenemos dos datasets:</p>
                     <ul>
-                        <li>Un dataset de entrenamiento, donde hay
-                            personas que ya tuvieron un ataque cardíaco e indican si tuvieron otro o no.
-                        </li>
-                        <li>Un dataset de evaluación, donde hay
-                            personas que solo tuvieron un ataque cardíaco, y se intenta predecir si tendrá otro.
-                        </li>
+                        <li>Un dataset de entrenamiento, donde hay personas que ya tuvieron un ataque cardíaco e indica,
+                            entre otros atributos, si tuvieron o no, otro ataque.</li>
+                        <li>Un dataset de evaluación, donde hay personas que solo tuvieron un ataque cardíaco y se
+                            intenta predecir si tendrán otro, en base a sus atributos y al modelo construído a partir
+                            del dataset de entrenamiento.</li>
                     </ul>
                 </div>
                 <div class="p">
@@ -67,39 +69,63 @@
                 </div>
 
                 <div class="divider"></div>
+                <h2>Marco teórico</h2>
+                <img src="images/UT3-TA4/formula-1.jpeg">
+                <p>En nuestro caso, la respuesta Y = 1 se corresponde con el evento "no tener un segundo ataque
+                    cardíaco", con lo cual, un <span class="mono">p(x1, x2, ...)</span> (equivalente a <span
+                        class="mono">Probabilidad(Y = 1)</span>) cercano a 1, es un buen pronóstico. En el modelo, esto
+                    se representa mediante el atributo <span class="mono">Confidence(No)</span>, o sea, la probabilidad
+                    de que el paciente no reciba un segundo ataque cardíaco.</p>
+
+                <div class="divider"></div>
                 <h2>RapidMiner</h2>
-                <p>Para realizar este proyecto, se utilizó <a href="https://rapidminer.com/">RapidMiner</a>, una
+                <p>Para realizar este proyecto que implica crear un modelo de Regresión Logística, se utilizó <a
+                        href="https://rapidminer.com/">RapidMiner</a>, una
                     aplicación para desarrollo de modelos de IA de uso industrial. El resultado es el siguiente:</p>
                 <p>Proceso de RapidMiner:</p>
                 <img class="max-width-100" src="images/UT3-TA4/RapidMiner/proceso/1.png">
                 <p>Modelo de regresión logística:</p>
                 <img class="max-width-100" src="images/UT3-TA4/RapidMiner/modelo.png">
-                <p>Dataset de evaluación con las predicciones:</p>
+                <p>Parte del dataset de evaluación con las predicciones:</p>
                 <img class="max-width-100" src="images/UT3-TA4/RapidMiner/dataset_evaluacion.png">
                 <img class="max-width-100" style="margin: 0;" src="images/UT3-TA4/RapidMiner/estadisticas_1.png">
                 <img class="max-width-100" src="images/UT3-TA4/RapidMiner/estadisticas_2.png">
-                <p>Dentro de las predicciones, se puede notar que 350 de ellas son clasificadas como positivas, y 340
-                    son negativas. Sin embargo, cabe aclarar que el modelo calcula una probabilidad de que sea positivo
-                    o negativo.<br>
-                    Para poner un ejemplo, veamos este ejemplo del dataset de evaluación:
-                </p>
+                <p>Dentro de las predicciones, se puede observar que 350 de los 690 pacientes del dataset de evaluación,
+                    tienen mayor probabilidad se tener un segundo ataque cardíaco.
+                    Veamos un ejemplo del dataset de evaluación:</p>
                 <img class="max-width-100" src="images/UT3-TA4/RapidMiner/ejemplo1.png">
-                <p>Como se puede ver, el modelo categoriza este ejemplo como negativo, o sea, que lo más probable es que
-                    no reciba un ataque al corazón. Sin embargo, viendo el atributo
-                    <span class="mono">confidence(No)</span>, se puede notar que reconoce una probabilidad del 50.3% de
-                    que sea negativo. Con esta probabilidad, lo mejor es asumir que podría tener un segundo ataque al
-                    corazón, y tomar medidas con ello en cuenta.
+                <p>Como se puede ver, el modelo categoriza a este paciente como no propenso a recibir un segundo ataque
+                    al corazón. Sin embargo, viendo el atributo
+                    <span class="mono">confidence(Si)</span>, se puede notar que reconoce una probabilidad del 49.7% de
+                    que sí lo reciba. Con esta probabilidad, lo mejor sería asumir que está en una posición de riesgo de
+                    tener un segundo ataque al corazón y tomar medidas para evitarlo.
                 </p>
-                <p>El modelo, en sí, calcula las probabilidades de que un paciente reciba un ataque al corazón o no.
-                    Luego, si la probabilidad de que ocurra es mayor o igual que un valor conocido como nivel de
-                    confianza (que suele ser 0,5), se considera como un caso positivo. El nivel de confianza se puede
-                    cambiar para ajustarse al contexto.
-                </p>
+                <p>El modelo, en sí, calcula las probabilidades de que un paciente reciba un segundo ataque al corazón o
+                    no.
+                    Luego, si la probabilidad de que ocurra es mayor o igual que 0,5, se considera como un caso
+                    positivo. Sin embargo, hay que tener el cuenta los riesgos de asumir cualquiera de los dos casos
+                    posibles, y las probabilidades en cuestión, dependiendo del contexto de la predicción.</p>
                 <p>Para determinar la performance del modelo, conviene generar un nuevo par de datasets de entrenamiento
                     y evaluación, a partir del dataset de entrenamiento original, de la siguiente forma:</p>
                 <img class="max-width-100" src="images/UT3-TA4/RapidMiner/proceso/2.png">
                 <img class="max-width-100" src="images/UT3-TA4/RapidMiner/proceso/2-1.png">
-                <img class="max-width-100" src="images/UT3-TA4/RapidMiner/matriz_confusion.png">
+                <div class="p">
+                    <p>Matriz de Confusión:</p>
+                    <img class="max-width-100" src="images/UT3-TA4/RapidMiner/matriz_confusion.png">
+                </div>
+                <p>Esta es la Matriz de Confusión, una herramienta que muestra información respecto al desempeño del
+                    modelo. Más concretamente, muestra la cantidad de veces que el modelo predijo que el paciente iba a
+                    tener un segundo ataque al corazón y acertó. Lo mismo con los casos negativos. Asimismo muestra los
+                    falsos positivos: en el caso de este modelo, son seis pacientes a los cuales se les predice que van
+                    a tener un segundo ataque, pero no lo tienen. Al igual que muestra los falsos negativos, que son
+                    cinco personas que tienen un segundo ataque cardíaco, pero el modelo no lo pudo predecir.</p>
+                <p>Dentro de los atributos que contribuyen a calcular la probabilidad de un segundo ataque al corazón,
+                    el atributo "Categoria_Peso", que representa el IMC del paciente, es el que más aporta a esta, con
+                    un P-valor de 0 y un coeficiente de -4,056, cuyo signo negativo se interpreta como que un aumento
+                    del valor del atributo implica que la función <span class="mono">logit(p(x1, x2, ...))</span> tienda
+                    a disminuir, tendiendo a 0 la probabilidad de no tener un segundo ataque cardíaco (<span
+                        class="mono">p(x1, x2, ...)</span>), o lo que es lo mismo,
+                    tendiendo a 1 la probabilidad de sí tenerlo.</p>
             </section>
 
         </div>

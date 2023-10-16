@@ -138,8 +138,8 @@
                 </table>
 
                 <h3>Medidas de errores de predicción</h3>
-                <p>Tras evaluar ambos modelos, se obtienen estadísticas acerca de los errores que tienen al
-                    predecir datos no vistos antes:</p>
+                <p>Tras evaluar ambos modelos, se obtienen estadísticas acerca de los errores, al momento de predecir la
+                    variable objetivo:</p>
                 <table>
                     <thead>
                         <tr>
@@ -165,17 +165,31 @@
                         </tr>
                     </tbody>
                 </table>
-                <p>
-                    Por un lado, no se nota una mejora clara en añadir feature selection al proceso. Ambos
-                    extremos del rango se acercaron un poco al 0, pero eso no implica que el modelo haya
-                    mejorado.
+                <p>Por un lado, no se nota una clara mejoría en añadir selección de atributos al proceso. Ambas
+                    distribuciones están centradas en 0, donde se da el intervalo modal.
                 </p>
-                <p>
-                    Por otro lado, se puede ver que ambos modelos fallan en, como máximo, 14000 dólares
-                    según la evaluación. Este es un nivel de error que, en un contexto donde la mayoría de
-                    casas cuestan, como mucho, 50000 dólares, puede considerarse importante.
-                </p>
-
+                <h2>Conclusión</h2>
+                <p>Al ser el R<sup>2</sup> ajustado (squared correlation) del modelo con selección de atributos "greedy"
+                    0.783, ello implica que
+                    este modelo explica el 78.3% de la variable objetivo. Significa que es un muy buen modelo, cuyas
+                    variables son todas significativas y contribuyen a explicar la mediana del precio de las casas.</p>
+                <div class="p">
+                    <p>Haciendo un análisis individualizado de cada atributo (variable independiente), manteniendo el
+                        resto de los atributos constantes, se encuentra que, en términos aproximados:</p>
+                    <ul>
+                        <li>Por cada 1% de aumento de terrenos residenciales zonificados en una ciudad, la mediana del
+                            precio de sus casas aumenta U$S 4835.</li>
+                        <li>Por cada unidad de aumento del Índice de Accesibilidad a carreteras radiales, la mediana del
+                            precio de las casas aumenta U$S 8980.</li>
+                        <li>Por cada 1% de disminución de la tasa de crimen por 100000 personas, la mediana de precios
+                            de las casas aumenta U$S 12435.</li>
+                        <li>Por cada 1% de disminución de la tasa de impuesto a la propiedad, la mediana de precios
+                            de las casas aumenta U$S 6654.</li>
+                        <li>Por cada una parte por 10 millones de disminución de concentración de óxidos nítricos en el
+                            aire, la mediana de precios de las casas aumenta U$S 7936.</li>
+                        <li>Por cada 1 estudiante más por profesor en la ciudad, la mediana de precios de las casas disminuye U$S 7936.</li>
+                    </ul>
+                </div>
             </section>
 
         </div>

@@ -1,5 +1,9 @@
 const attributesData = [
     {
+        name: "Edad",
+        desc: "Representa la edad en años del paciente, redondeada al número más cercano."
+    },
+    {
         name: "Estado_civil",
         desc: "Representa, mediante un número, el estado civil de la persona: 0 = soltero, 1 = casado, 2 = divorciado, 3 = viudo."
     },
@@ -26,7 +30,7 @@ const attributesData = [
     {
         name: "2do_Ataque_Corazon",
         objective: true,
-        desc: "Indica si la persona ha recibido un segundo ataque cardíaco. Solo aparece en el dataset de entrenamiento."
+        desc: "Indica si la persona ha recibido un segundo ataque cardíaco. Se representa con \"Si\" o \"No\". Este atributo solo se encuentra presente en el dataset de entrenamiento."
     },
 ];
 

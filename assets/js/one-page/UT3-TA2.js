@@ -12,7 +12,7 @@ const attributesData = [
     },
     {
         name: "ZN",
-        desc: "Proporción de terreno residencial zonificado para lotes de 25000 pies cuadrados.",
+        desc: "Proporción de terreno residencial zonificado para lotes por 25000 pies cuadrados.",
         type: "Números reales",
         range: "De 0 a 100",
         distr: {
@@ -89,7 +89,7 @@ const attributesData = [
     },
     {
         name: "RAD",
-        desc: "Índice de accesibilidad a carreteras radiales.",
+        desc: "Índice de Accesibilidad a carreteras radiales.",
         type: "Números enteros",
         range: "De 1 a 24",
         distr: {
