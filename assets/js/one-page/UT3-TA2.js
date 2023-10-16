@@ -1,13 +1,13 @@
 const attributesData = [
     {
         name: "CRIM",
-        desc: "Tasa de crimen per cápita de la ciudad.",
+        desc: "Tasa de crimen por 100000 personas.",
         type: "Números reales",
         range: "De 0,006 a 88,976",
         distr: {
             imgSrc: "/images/UT3-TA2/0.png",
-            desc: "Alta concentración en el rango 0-10, pocos ejemplos en el resto del rango",
-            outliers: "No se notan outliers"
+            desc: "Alta concentración en el intervalo 0-10",
+            notes: ""
         },
     },
     {
@@ -17,30 +17,30 @@ const attributesData = [
         range: "De 0 a 100",
         distr: {
             imgSrc: "/images/UT3-TA2/1.png",
-            desc: "Alta concentración en el rango 0-10, pocos ejemplos en el resto del rango",
-            outliers: "No se notan outliers"
+            desc: "Alta concentración en el intervalo 0-10",
+            notes: ""
         },
     },
     {
         name: "INDUS",
-        desc: "Proporción de acres de negocios minoristas en la ciudad.",
+        desc: "Proporción de acres de negocios minoristas.",
         type: "Números reales",
         range: "De 0,460 a 27,740",
         distr: {
             imgSrc: "/images/UT3-TA2/2.png",
-            desc: "No se nota ninguna distribución particular",
-            outliers: "No se notan outliers"
+            desc: "No se observa ninguna Distribución particular",
+            notes: ""
         },
     },
     {
         name: "CHAS",
         desc: "Variable dummy que indica si tiene frontera con el río Charles River.",
-        type: "Numéros reales",
-        range: "De 0 a 1",
+        type: "Números enteros",
+        range: "0 o 1",
         distr: {
             imgSrc: "/images/UT3-TA2/3.png",
-            desc: "Solo tiene dos valores",
-            outliers: "No se notan outliers"
+            desc: "La mayor parte de las ciudades no tienen frontera con el río Charles River",
+            notes: ""
         },
     },
     {
@@ -50,8 +50,8 @@ const attributesData = [
         range: "De 0,385 a 0,871",
         distr: {
             imgSrc: "/images/UT3-TA2/4.png",
-            desc: "No se nota ninguna distribución particular, más allá de una tendencia decreciente",
-            outliers: "No se notan outliers"
+            desc: "Leve asimetría positiva o a la derecha",
+            notes: ""
         },
     },
     {
@@ -62,62 +62,62 @@ const attributesData = [
         distr: {
             imgSrc: "/images/UT3-TA2/5.png",
             desc: "Se asemeja a una distribución gaussiana, con media alrededor del 6 o 7",
-            outliers: "No se notan outliers"
+            notes: ""
         },
     },
     {
         name: "AGE",
-        desc: "Proporción de unidades ocupadas por sus propietarios, que fueron construidas antes de 1940.",
+        desc: "Porcentaje de unidades ocupadas por sus propietarios, que fueron construidas antes de 1940.",
         type: "Números reales",
-        range: "De 2,900 a 100,000",
+        range: "De 2,9 a 100,0",
         distr: {
             imgSrc: "/images/UT3-TA2/6.png",
-            desc: "Distribución creciente, con una parte importante de los ejemplos en el rango 80-100",
-            outliers: "No se notan outliers"
+            desc: "Asimetría a la izquierda, con una gran propoción de datos en el intervalo 80-100",
+            notes: ""
         },
     },
     {
         name: "DIS",
-        desc: "Distancias ponderadas a cinco centros de empleo de Boston.",
+        desc: "Promedio ponderado de las distancias a cinco centros de empleo de Boston.",
         type: "Números reales",
         range: "De 1,130 a 12,127",
         distr: {
             imgSrc: "/images/UT3-TA2/7.png",
-            desc: "Distribución decreciente",
-            outliers: "No se notan outliers"
+            desc: "Asimetría a la derecha",
+            notes: ""
         },
     },
     {
         name: "RAD",
         desc: "Índice de accesibilidad a carreteras radiales.",
-        type: "Números reales",
+        type: "Números enteros",
         range: "De 1 a 24",
         distr: {
             imgSrc: "/images/UT3-TA2/8.png",
-            desc: "Dos cúmulos de datos, uno en el rango 0-10 y otro en el rango 20-24",
-            outliers: "No se notan outliers"
+            desc: "Dos grupos de datos polarizados, uno en el intervalo 0-10 y otro en el intervalo 20-24",
+            notes: ""
         },
     },
     {
         name: "TAX",
         desc: "Tasa de impuesto a la propiedad de valor total por $10000.",
-        type: "Números reales",
+        type: "Números enteros",
         range: "De 187 a 711",
         distr: {
             imgSrc: "/images/UT3-TA2/9.png",
-            desc: "Dos cúmulos de datos, uno en el rango 187-500 y otro en el rango 650-700",
-            outliers: "No se notan outliers"
+            desc: "Dos cúmulos de datos, uno en el intervalo 187-500 y otro en el intervalo 650-700",
+            notes: ""
         },
     },
     {
         name: "PTRATIO",
-        desc: "Proporción entre cantidad de alumnos y de maestros de la ciudad.",
+        desc: "Cantidad de alumnos por maestro o profesor.",
         type: "Números reales",
         range: "De 12,6 a 22",
         distr: {
             imgSrc: "/images/UT3-TA2/10.png",
-            desc: "No se nota ninguna distribución particular, más allá de un pico en el rango 20-21",
-            outliers: "No se notan outliers"
+            desc: "No se observa ninguna distribución particular, más allá de un pico en el intervalo 20-21",
+            notes: ""
         },
     },
     {
@@ -127,31 +127,31 @@ const attributesData = [
         range: "De 0,320 a 396,900",
         distr: {
             imgSrc: "/images/UT3-TA2/11.png",
-            desc: "Alta concentración en el rango 350-400, pocos ejemplos en el resto del rango",
-            outliers: "No se notan outliers"
+            desc: "Asimetría a la izquierda, con una alta concentración en el intervalo 350-400",
+            notes: ""
         },
     },
     {
         name: "LSTAT",
-        desc: "Proporción de gente de estatus bajo sobre el total.",
+        desc: "Proporción de gente de estatus bajo.",
         type: "Números reales",
         range: "De 1,730 a 37,970",
         distr: {
             imgSrc: "/images/UT3-TA2/12.png",
-            desc: "No se nota ninguna distribución particular, más allá de una tendencia decreciente",
-            outliers: "No se notan outliers"
+            desc: "Asimetría a la derecha",
+            notes: ""
         },
     },
     {
         name: "MEDV",
         objective: true,
-        desc: "Variable de salida, representa la mediana de valores de hogares ocupados por sus dueños, en miles de dólares.",
+        desc: "Es la variable de salida que representa la mediana del precio de las casas que están ocupadas por sus dueños, en miles de dólares.",
         type: "Números reales",
         range: "De 5 a 50",
         distr: {
             imgSrc: "/images/UT3-TA2/13.png",
-            desc: "Distribución ligeramente similar a una distribución gaussiana, más un pico ligero en el rango 45-50",
-            outliers: "No se notan outliers"
+            desc: "Distribución ligeramente similar a una distribución gaussiana con intervalo modal 20-25",
+            notes: ""
         },
     },
 ];
@@ -188,7 +188,7 @@ for (let attr of attributesData) {
                     }]
                 },
                 { tag: "td", children: [attr.distr.desc] },
-                { tag: "td", children: [attr.distr.outliers] },
+                { tag: "td", children: [attr.distr.notes] },
             ]
         })
     );
@@ -208,11 +208,11 @@ const rmSteps = [
         content: "Barajar los ejemplos del dataset mediante el operador \"Shuffle\"."
     },
     {
-        content: "Dividir el dataset en dos sub-datasets (uno para entrenamiento, y otro para evaluación) mediante dos operadores \"Filter examples range\", con rangos de 1 - 450 y 451 - 506 respectivamente."
+        content: "Dividir el dataset en dos sub-datasets (uno para entrenamiento, y otro para evaluación) mediante dos operadores \"Filter examples range\", con rangos de 1 - 450 y 451 - 506, respectivamente."
     },
     {
-        content: "Con el dataset de entrenamiento, realizar dos operaciones \"Split Validation\", una con regresión lineal sin selección de atributos, y otra con una regresión lineal con una selección de atributos \"greedy\".\n"
-            + "El operador \"Performance\" en ambos \"Split Validation\" debe indicar las características \"squared error\", \"correlation\" y \"squared correlation\"."
+        content: "Con el dataset de entrenamiento, realizar dos operaciones \"Split Validation\": una con regresión lineal sin selección de atributos y otra con regresión lineal con selección de atributos \"greedy\".\n"
+            + "Los operadores \"Performance\" de ambos \"Split Validation\" deben indicar las características \"squared error\", \"correlation\" y \"squared correlation\"."
     },
     {
         content: "Aplicar el dataset de evaluación a los modelos de ambas operaciones."
