@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Ejemplo de uso del Linear Discriminant Analysis - Portafolios de IA de Santiago De Olivera</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">Página principal</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/santiago-de-olivera-49247b234/"
+                        class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/santiagodeolivera" class="icon brands fa-github"><span
+                            class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+                <h1>Linear Discriminant Analysis</h1>
+
+                <div class="divider"></div>
+                <p>El LDA (<b>L</b>inear <b>D</b>iscriminant <b>A</b>nalysis) es un método de clasificación supervisado.
+                </p>
+
+                <h3>Objetivo</h3>
+                <p>Dado que conocemos que los datos pueden provenir de una de dos (o más) poblaciones
+                    conocidas, el objetivo del LDA es clasificar un nuevo dato en una de las poblaciones
+                    consideradas.</p>
+
+                <h3>Origen</h3>
+                <p>La primera aplicación del LDA fue realizada por el estadístico Ronald Fisher en 1933, el cual
+                    encontró la solución al problema de clasificar los restos de un cráneo descubiertos en
+                    una excavación, como humano, utilizando la distribución de medidas físicas para los cráneos humanos
+                    y los de antropoides.</p>
+
+                <h3>Breve descripción del método</h3>
+                <p>Se dispone de un conjunto amplio de elementos que pueden venir de dos o más poblaciones distintas.
+                    En cada elemento se observa una variable aleatoria X, que es p-dimensional, cuya distribución se
+                    conoce en las poblaciones consideradas. Se desea clasificar un nuevo elemento, con valores de la
+                    variable X. Este método implica lo que se llama reconocimiento de patrones (pattern recognition).
+                </p>
+                <p>Dada una variable dependiente cualititativa que diferencia los grupos y un vector X de variables
+                    independientes cuantitativas, el LDA consiste en obtener varias funciones lineales de estas (una
+                    para cada clase),
+                    denominadas funciones discrimiantes, cuya formula es la siguiente:</p>
+                <img style="width: 100%;" src="images/LDA/formula-1.png">
+                <div class="p">
+                    <p>Donde:</p>
+                    <img src="images/LDA/formula-2.png"><br>
+                    <img src="images/LDA/formula-3.png">
+                </div>
+                <p>LDA realiza predicciones estimando la probabilidad de que un nuevo vector pertenezca a cada clase. La
+                    clase que tenga la mayor probabilidad es la clase asignada, realizándose una predicción.
+                    El modelo utiliza el Teorema de Bayes para estimar las probabilidades.</p>
+                <img src="images/LDA/formula-4.png">
+                <div class="p">
+                    <p>Donde:</p>
+                    <ul>
+                        <li><span class="mono">P(Y = k | X = x)</span> es la probabilidad de que el caso con variable
+                            independiente de valor <span class="mono">x</span> pertenezca a la clase <span
+                                class="mono">k</span>.</li>
+                        <li><span class="mono">P(k)</span> es la probabilidad de pertenecer a la clase <span
+                                class="mono">k</span>. Esto se estima a partir de la proporción de ejemplos en dicha
+                            clase sobre el total en el dataset.</li>
+                        <li><span class="mono">P(x | k)</span> es la probabilidad a priori de que, dado que pertenece a
+                            la clase <span class="mono">k</span>, la variable independiente tenga el valor <span
+                                class="mono">x</span>. Esto se estima mediante la función discriminante D<sub>k</sub>(x)
+                            mencionada anteriormente.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <section class="split contact">
+                <section class="alt">
+                    <h3>Número de teléfono</h3>
+                    <p>(+598) 098 553 946</p>
+                </section>
+                <section>
+                    <h3>Email</h3>
+                    <p>santiagodeolivera@gmail.com, santiago.deolivera@correo.ucu.edu.uy</p>
+                </section>
+                <section>
+                    <h3>Social</h3>
+                    <ul class="icons alt">
+                        <li><a href="https://www.linkedin.com/in/santiago-de-olivera-49247b234/"
+                                class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a>
+                        </li>
+                        <li><a href="https://github.com/santiagodeolivera" class="icon brands alt fa-github"><span
+                                    class="label">GitHub</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </footer>
+
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul>
+                <li>&copy; Untitled</li>
+                <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/other.js"></script>
+    <script src="assets/js/one-page/UT3-TA4.js"></script>
+
+</body>
+
+</html>
