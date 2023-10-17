@@ -72,12 +72,14 @@
                 <h2>Marco teórico</h2>
                 <p>La predicción de un segundo posible ataque cardíaco se realiza en base a un valor de un <br><span
                         class="mono">p = P(Y = 1)</span>, donde <span class="mono">Y</span> es una variable aleatoria de
-                    Bernoulli (<span class="mono">p</span>), definida <span class="mono">Y = 1</span> en caso de la persona no
+                    Bernoulli (<span class="mono">p</span>), definida <span class="mono">Y = 1</span> en caso de la
+                    persona no
                     tenga un segundo ataque cardíaco, <span class="mono">Y = 0</span>, en caso de que la persona sí lo
                     tenga.</p>
 
                 <p>El valor <span class="mono">p = P(Y = 1)</span> se calcula en base a los datos observados <span
-                        class="mono">x = (x<sub>1</sub>, ..., x<sub>p</sub>)</span> por eso <br><span class="mono">p = p(x)</span>.</p>
+                        class="mono">x = (x<sub>1</sub>, ..., x<sub>p</sub>)</span> por eso <br><span class="mono">p =
+                        p(x)</span>.</p>
 
                 <p>Para logar un valor de <span class="mono">p(x)</span> que esté entre 0 y 1 se plantea aplicar la
                     siguiente transformación
@@ -85,10 +87,16 @@
                         class="mono">Logit(p(x))</span> toma valores entre menos infinito y más infinito
                     (conforme <span class="mono">p(x)</span> toma valores hacia 0 o 1, respectivamente). Con lo
                     cual, un modelo para la
-                    transformación logit sobre <span class="mono">p(x)</span> podría ser <br><span class="mono">Logit(p(x))
-                        = Log(p(x) / (1 - p(x))) = a * x + b</span> o en
-                    términos de <br><span class="mono">p(x) = exp(a * x + b) / (1 + exp(a * x + b)) = 1 / ( 1 + exp(-(a * x
-                        + b)) )</span>.</p>
+                    transformación Logit sobre <span class="mono">p(x)</span> podría ser <br><span
+                        class="mono">Logit(p(x)) = Log(p(x) / (1 - p(x))) = a * x + b</span><br> o en
+                    términos de <br><span class="mono">p(x) = exp(a * x + b) / (1 + exp(a * x + b)) = 1 / (1 + exp(-(a
+                        * x + b)))</span>.</p>
+
+                <p>En nuestro caso, la respuesta Y = 1 se corresponde con el evento "no tener un segundo ataque
+                    cardíaco", con lo cual, un <span class="mono">p(x<sub>1</sub>, ..., x<sub>p</sub>)</span> (equivalente a <span
+                        class="mono">P(Y = 1)</span>) cercano a 1, es un buen pronóstico. En el modelo, esto
+                    se representa mediante el atributo <span class="mono">Confidence(No)</span>, o sea, la probabilidad
+                    de que el paciente no reciba un segundo ataque cardíaco.</p>
 
                 <div class="divider"></div>
                 <h2>RapidMiner</h2>
@@ -135,7 +143,7 @@
                 <p>Dentro de los atributos que contribuyen a calcular la probabilidad de un segundo ataque al corazón,
                     el atributo "Categoria_Peso", que representa el IMC del paciente, es el que más aporta a esta, con
                     un P-valor de 0 y un coeficiente de -4,056, cuyo signo negativo se interpreta como que un aumento
-                    del valor del atributo implica que la función <span class="mono">logit(p(x1, x2, ...))</span> tienda
+                    del valor del atributo implica que la función <span class="mono">Logit(p(x1, x2, ...))</span> tienda
                     a disminuir, tendiendo a 0 la probabilidad de no tener un segundo ataque cardíaco (<span
                         class="mono">p(x1, x2, ...)</span>), o lo que es lo mismo,
                     tendiendo a 1 la probabilidad de sí tenerlo.</p>

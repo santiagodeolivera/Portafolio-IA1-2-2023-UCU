@@ -67,16 +67,17 @@
                     variable X. Este método implica lo que se llama reconocimiento de patrones (pattern recognition).
                 </p>
                 <p>Dada una variable dependiente cualititativa que diferencia los grupos y un vector X de variables
-                    independientes cuantitativas, el LDA consiste en obtener varias funciones lineales de estas (una
-                    para cada clase),
-                    denominadas funciones discrimiantes, cuya formula es la siguiente:</p>
+                    independientes cuantitativas, el LDA consiste en obtener funciones lineales de éstas,
+                    denominadas funciones discriminantes, cuya fórmula es la siguiente, considerando el caso
+                    simplificado de una sola variable independiente:</p>
                 <img style="width: 100%;" src="images/LDA/formula-1.png">
                 <div class="p">
                     <p>Donde:</p>
                     <img src="images/LDA/formula-2.png"><br>
                     <img src="images/LDA/formula-3.png">
                 </div>
-                <p>LDA realiza predicciones estimando la probabilidad de que un nuevo vector pertenezca a cada clase. La
+                <p>LDA realiza predicciones estimando la probabilidad de que un nuevo vector <span class="mono">x</span>
+                    pertenezca a cada clase. La
                     clase que tenga la mayor probabilidad es la clase asignada, realizándose una predicción.
                     El modelo utiliza el Teorema de Bayes para estimar las probabilidades.</p>
                 <img src="images/LDA/formula-4.png">
@@ -95,6 +96,9 @@
                             mencionada anteriormente.</li>
                     </ul>
                 </div>
+                <p>La funciones discriminantes de <span class="mono">k</span> surgen al realizar una estimación de <span
+                        class="mono">P(x | k)</span> sobre la función de probabilidad vista anteriormente, asumiendo que
+                    los predictores tienen una distribución Gaussiana y son condicionalmente independientes.</p>
             </section>
 
         </div>
