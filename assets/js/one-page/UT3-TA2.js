@@ -5,7 +5,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 0,006 a 88,976",
         distr: {
-            imgSrc: "/images/UT3-TA2/0.png",
+            imgSrc: "images/UT3-TA2/0.png",
             desc: "Alta concentración en el intervalo 0-10",
             notes: ""
         },
@@ -16,7 +16,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 0 a 100",
         distr: {
-            imgSrc: "/images/UT3-TA2/1.png",
+            imgSrc: "images/UT3-TA2/1.png",
             desc: "Alta concentración en el intervalo 0-10",
             notes: ""
         },
@@ -27,7 +27,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 0,460 a 27,740",
         distr: {
-            imgSrc: "/images/UT3-TA2/2.png",
+            imgSrc: "images/UT3-TA2/2.png",
             desc: "No se observa ninguna Distribución particular",
             notes: ""
         },
@@ -38,7 +38,7 @@ const attributesData = [
         type: "Números enteros",
         range: "0 o 1",
         distr: {
-            imgSrc: "/images/UT3-TA2/3.png",
+            imgSrc: "images/UT3-TA2/3.png",
             desc: "La mayor parte de las ciudades no tienen frontera con el río Charles River",
             notes: ""
         },
@@ -49,7 +49,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 0,385 a 0,871",
         distr: {
-            imgSrc: "/images/UT3-TA2/4.png",
+            imgSrc: "images/UT3-TA2/4.png",
             desc: "Leve asimetría positiva o a la derecha",
             notes: ""
         },
@@ -60,7 +60,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 3,561 a 8,780",
         distr: {
-            imgSrc: "/images/UT3-TA2/5.png",
+            imgSrc: "images/UT3-TA2/5.png",
             desc: "Se asemeja a una distribución gaussiana, con media alrededor del 6 o 7",
             notes: ""
         },
@@ -71,7 +71,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 2,9 a 100,0",
         distr: {
-            imgSrc: "/images/UT3-TA2/6.png",
+            imgSrc: "images/UT3-TA2/6.png",
             desc: "Asimetría a la izquierda, con una gran propoción de datos en el intervalo 80-100",
             notes: ""
         },
@@ -82,7 +82,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 1,130 a 12,127",
         distr: {
-            imgSrc: "/images/UT3-TA2/7.png",
+            imgSrc: "images/UT3-TA2/7.png",
             desc: "Asimetría a la derecha",
             notes: ""
         },
@@ -93,7 +93,7 @@ const attributesData = [
         type: "Números enteros",
         range: "De 1 a 24",
         distr: {
-            imgSrc: "/images/UT3-TA2/8.png",
+            imgSrc: "images/UT3-TA2/8.png",
             desc: "Dos grupos de datos polarizados, uno en el intervalo 0-10 y otro en el intervalo 20-24",
             notes: ""
         },
@@ -104,7 +104,7 @@ const attributesData = [
         type: "Números enteros",
         range: "De 187 a 711",
         distr: {
-            imgSrc: "/images/UT3-TA2/9.png",
+            imgSrc: "images/UT3-TA2/9.png",
             desc: "Dos cúmulos de datos, uno en el intervalo 187-500 y otro en el intervalo 650-700",
             notes: ""
         },
@@ -115,7 +115,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 12,6 a 22",
         distr: {
-            imgSrc: "/images/UT3-TA2/10.png",
+            imgSrc: "images/UT3-TA2/10.png",
             desc: "No se observa ninguna distribución particular, más allá de un pico en el intervalo 20-21",
             notes: ""
         },
@@ -126,7 +126,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 0,320 a 396,900",
         distr: {
-            imgSrc: "/images/UT3-TA2/11.png",
+            imgSrc: "images/UT3-TA2/11.png",
             desc: "Asimetría a la izquierda, con una alta concentración en el intervalo 350-400",
             notes: ""
         },
@@ -137,7 +137,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 1,730 a 37,970",
         distr: {
-            imgSrc: "/images/UT3-TA2/12.png",
+            imgSrc: "images/UT3-TA2/12.png",
             desc: "Asimetría a la derecha",
             notes: ""
         },
@@ -149,7 +149,7 @@ const attributesData = [
         type: "Números reales",
         range: "De 5 a 50",
         distr: {
-            imgSrc: "/images/UT3-TA2/13.png",
+            imgSrc: "images/UT3-TA2/13.png",
             desc: "Distribución ligeramente similar a una distribución gaussiana con intervalo modal 20-25",
             notes: ""
         },
